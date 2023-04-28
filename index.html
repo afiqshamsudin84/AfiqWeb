@@ -6,16 +6,30 @@
     <style>
       /* CSS styling */
       body {
-        font-family: Arial, sans-serif;
-        background-color: #f2f2f2;
         margin: 0;
         padding: 0;
       }
-      form {
-        max-width: 600px;
-        margin: 20px auto;
+      .header {
+        background-color: #292b2c;
+        color: #fff;
         padding: 20px;
-        background-color: #fff;
+        text-align: center;
+      }
+      .header h1 {
+        margin: 0;
+        font-size: 36px;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      .header img {
+        height: 50px;
+        margin-top: 10px;
+      }
+      .container {
+        background-color: #f2f2f2;
+        margin: 0 auto;
+        max-width: 1000px;
+        padding: 20px;
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
       }
@@ -48,39 +62,52 @@
       input[type="submit"]:hover {
         background-color: #3e8e41;
       }
+      @media only screen and (max-width: 1000px) {
+        .container {
+          width: 90%;
+        }
+      }
     </style>
   </head>
   <body>
-    <form>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
+    <div class="header">
+      <h1>Edit Title Here</h1>
+      <img src="edit-logo-url-here" alt="Edit Logo Here">
+    </div>
+    <div class="container">
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="id-number">ID Number:</label>
+        <input type="text" id="id-number" name="id-number" required>
+        
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+        
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+        
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="5" required></textarea>
+        
+        <label for="postcode">Postal Code:</label>
+        <input type="text" id="postcode" name="postcode" required>
+        
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required>
+        
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country" required>
       
-      <label for="id-number">ID Number:</label>
-      <input type="text" id="id-number" name="id-number" required>
+        <input type="submit" value="Submit">
+      </form>
+
       
-      <label for="dob">Date of Birth:</label>
-      <input type="date" id="dob" name="dob" required>
       
-      <label for="phone">Phone Number:</label>
-      <input type="tel" id="phone" name="phone" required>
-      
-      <label for="email">Email Address:</label>
-      <input type="email" id="email" name="email" required>
-      
-      <label for="address">Address:</label>
-      <textarea id="address" name="address" rows="5" required></textarea>
-      
-      <label for="postcode">Postal Code:</label>
-      <input type="text" id="postcode" name="postcode" required>
-      
-      <label for="city">City:</label>
-      <input type="text" id="city" name="city" required>
-      
-      <label for="country">Country:</label>
-      <input type="text" id="country" name="country" required>
-      
-      <input type="submit" value="Submit">
-    </form>
     
     <script>
       // JavaScript validation
